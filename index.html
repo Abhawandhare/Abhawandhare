@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Box</title>
+</head>
+<body>
+    <script>
+        function show(){
+            var alert= document.getElementById("container");
+            alert.style.display="block"
+
+        }
+        function hide(){
+            var alert= document.getElementById("container");
+            alert.style.display="none"
+        }
+            
+    </script>
+    <style>
+        body{
+            background-color:lightblue;
+            height: fit-content;
+            width: fit-content;
+        }
+        #container{
+            display: none;
+            background-color:white;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 300px;
+            height: 110px;
+            padding-top: 50px;
+            border-top: 2px solid green;
+            box-shadow: 5px 10px 18px #888888;
+        } 
+        #msg{
+            font-size: medium;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            vertical-align: middle;
+            text-align: center;
+            color: rgb(66,66,66);
+        }
+        #ok{
+            color: rgb(3, 11, 11);
+            display: block;
+            width: 80px;
+            height: 30px;
+            margin: 50px auto;
+            border: none;
+            background-color: rgb(36, 6, 101);
+
+        }
+        #ok:hover{
+            color: blue;
+            background-color: rgb(28, 3, 130);
+            cursor: pointer;
+        }
+        #Done{
+            width: 200px;
+            height: 80px;
+            color: darkblue;
+            background-color: beige;
+            border: 2px solid blue;
+            border-radius: 10px;
+            font-size: large;
+
+        }
+        #Done:hover{
+            background-color: darkblue;
+            color: wheat;
+        }
+    </style>
+    <div id="container">
+        <div id="msg">Successfully Done</div>
+        <button id="ok" onclick="hide()">OK</button>
+    </div>
+    <input type="button" id="Done" value="Done" onclick="Done()">
+    
+</body>
+</html>
